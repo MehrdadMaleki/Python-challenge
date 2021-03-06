@@ -2,7 +2,7 @@ import pandas as pd
 
 #Read the file by using the address of CSV file
 
-file= "../Resources/election_data.csv"
+file= "../resources/election_data.csv"
 
 paypoll=pd.read_csv(file)
 
