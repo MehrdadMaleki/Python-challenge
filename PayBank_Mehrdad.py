@@ -64,7 +64,7 @@ print(" Greatest decrease in Losses :", Greatestdecreaseinlooses ,"$" , minchang
 
 
 
-
+#Save as text file 
 
 
 sys.stdout = open("../resources/PayBank Result.txt" , "w")
