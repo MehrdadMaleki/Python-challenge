@@ -1,5 +1,8 @@
 import pandas as pd 
 
+import sys
+
+
 #Read the file by using the address of CSV file
 
 file= "../resources/budget_data.csv"
@@ -61,6 +64,20 @@ print(" Greatest decrease in Losses :", Greatestdecreaseinlooses ,"$" , minchang
 
 
 
+
+
+
+sys.stdout = open("../resources/PayBank Result.txt" , "w")
+
+
+print(" -------------------------------- ")
+print(" Financial Analysis ")
+print(" -------------------------------- ")
+print(" total months : " , total_number_month)
+print(" total : $",net_total_ProfitLosses)
+print(" average changes : $",average_of_the_changes_ProfitLosses)
+print(" Greatest Increase in Profits :", GreatestIncreaseinProfits ,"$" , maxchange)
+print(" Greatest decrease in Losses :", Greatestdecreaseinlooses ,"$" , minchange)
 
 
 
