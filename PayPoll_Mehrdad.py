@@ -1,5 +1,7 @@
 import pandas as pd
 
+import sys
+
 #Read the file by using the address of CSV file
 
 file= "../resources/election_data.csv"
@@ -33,6 +35,9 @@ print("Total Votes :",TotalVotes)
 
 print(" -------------------------------- ")
 
+
+
+
 #The percentage of votes each candidate won
 
 for x in listofcandidates:
@@ -59,6 +64,34 @@ print(" -------------------------------- ")
 
 
 
+#Save as text file 
+
+
+sys.stdout = open("../resources/PayPoll Result.txt" , "w")
+
+
+print(" -------------------------------- ")
+print(" Election Results ")
+print(" -------------------------------- ")
+
+print("Total Votes :",TotalVotes)
+
+print(" -------------------------------- ")
+
+
+
+print(" -------------------------------- ")
+
+#The winner of the election based on popular vote
+
+for x in listofcandidates:
+    numberwin=(paypoll["Candidate"] == x).sum()
+    if numberwin == Winner:
+        print("Winner : " , x)
+    else:
+        pass
+
+print(" -------------------------------- ")
 
 
 
