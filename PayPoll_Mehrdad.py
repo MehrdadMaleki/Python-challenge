@@ -70,6 +70,8 @@ print(" -------------------------------- ")
 sys.stdout = open("../resources/PayPoll Result.txt" , "w")
 
 
+
+
 print(" -------------------------------- ")
 print(" Election Results ")
 print(" -------------------------------- ")
@@ -78,11 +80,14 @@ print("Total Votes :",TotalVotes)
 
 print(" -------------------------------- ")
 
+for x in listofcandidates:
+    number=(paypoll["Candidate"] == x).sum()
+    percentage=round((number/TotalVotes)*100,3)
+    print( x , percentage,"%"," (",number,")") 
 
 
 print(" -------------------------------- ")
 
-#The winner of the election based on popular vote
 
 for x in listofcandidates:
     numberwin=(paypoll["Candidate"] == x).sum()
@@ -92,6 +97,11 @@ for x in listofcandidates:
         pass
 
 print(" -------------------------------- ")
+
+
+
+
+
 
 
 
